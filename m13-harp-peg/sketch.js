@@ -24,7 +24,8 @@ var touchIsDown = false;
 
 // preload background and cursor images
 function preload() {
-  img = loadImage("./images/M13.jpg");
+  img = loadImage("./images/testStrips.jpg"); //Test Strips Image for testing
+  //img = loadImage("./images/M13.jpg");
   img2 = loadImage("./images/BRing2.jpg");
   img3 = loadImage("./images/test.jpg");
   img4 = loadImage("./images/M13_2.jpg");
@@ -66,7 +67,7 @@ function draw() {
   }
   if (harmony == 'minor' && update) {
     image(img, 0, 0, imWidth / imScale, imHeight / imScale);  // Sets displayed image
-    activeImg = img4; // Sets image for sonification
+    activeImg = img; // Sets image for sonification
   }
 
   if (mode == 'manual') {
@@ -77,6 +78,8 @@ function draw() {
       // pixValue = (img3.pixels[pixNum] + img3.pixels[pixNum + 1] + img3.pixels[pixNum + 2]) / 3.;
       // pixValue = Math.pow(pixValue / 256, 1.5) * 256; //scale brightness
       pixValue = calcPixValue(mouseX, mouseY);
+
+      console.log(pixValue);
 
       if (pixNum != lastPixNum) {
         playNotes(); // trigger note for this pixel value
@@ -176,7 +179,7 @@ function calcPixValue(coordX, coordY) {
   pixNum0 = Math.round(coordX * imScale) + Math.round(coordY * imScale) * imWidth;
   pixNum = Math.round(4 * pixNum0); //labels pixel
   pixValue = (activeImg.pixels[pixNum] + activeImg.pixels[pixNum + 1] + activeImg.pixels[pixNum + 2]) / 3.;
-  pixValue = Math.pow(pixValue / 256, 1.5) * 256; //scale brightness
+  //pixValue = Math.pow(pixValue / 256, 1.5) * 256; //scale brightness
 
   return pixValue
 }

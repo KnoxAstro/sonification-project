@@ -33,7 +33,7 @@ function preload() {
   img = loadImage("./images/finalstars.png");
   //img = loadImage("./images/testStrips.jpg");
   img2 = loadImage("./images/ngc6633_crop.jpg");
-  hubbleImg = loadImage("./images/hubble_2_0.png");
+  hubbleImg = loadImage("./images/Hubble_2_0.png");
   // https://science.nasa.gov/toolkits/spacecraft-icons
   soundFormats('mp3');
 }

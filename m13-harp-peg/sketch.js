@@ -64,10 +64,12 @@ function draw() {
   if (harmony == 'major' && update) {
     image(img, 0, 0, imWidth / imScale, imHeight / imScale);  // Sets displayed image
     activeImg = img;  // Sets image for sonification
+    //update = false;
   }
   if (harmony == 'minor' && update) {
     image(img4, 0, 0, imWidth / imScale, imHeight / imScale);  // Sets displayed image
     activeImg = img4; // Sets image for sonification
+    //update = false;
   }
 
   if (mode == 'manual') {

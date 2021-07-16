@@ -33,7 +33,7 @@ function preload() {
   img = loadImage("./images/finalstars.png");
   //img = loadImage("./images/testStrips.jpg");
   img2 = loadImage("./images/ngc6633_crop.jpg");
-  hubbleImg = loadImage("./images/Hubble_2_0.png");
+  hubbleImg = loadImage("./images/Knox_PAW.png");
   // https://science.nasa.gov/toolkits/spacecraft-icons
   soundFormats('mp3');
 }
@@ -183,9 +183,9 @@ function mousePressed() {
     autoy = mouseY;
     autox0 = mouseX;
     autoy0 = mouseY;
-    startCorner(mouseX, mouseY);
-    signX = 1;
-    signY = 0;
+    //startCorner(mouseX, mouseY);
+    //signX = 1;
+    //signY = 0;
   }
 
   if (getAudioContext().state !== 'running') {
@@ -352,9 +352,9 @@ function autoCursor(x, y) {
     this.x = autox;
     this.y = autoy;
   };
-  var imScale = 0.6;
+  var imScale = 0.3;
   this.show = function() {
-    image(hubbleImg, this.x - imScale * hubbleImg.width * 0.5, this.y - imScale * hubbleImg.height * 0.75, imScale * hubbleImg.width, imScale * hubbleImg.height);
+    image(hubbleImg, this.x - imScale * hubbleImg.width * 0.5, this.y - imScale * hubbleImg.height * 0.25, imScale * hubbleImg.width, imScale * hubbleImg.height);
 
   };
 }
@@ -371,8 +371,8 @@ function cursorIm(x, y) {
   };
 
   this.show = function() {
-    var imScale = 0.6;
-    image(hubbleImg, this.x - imScale * hubbleImg.width * 0.5, this.y - imScale * hubbleImg.height * 0.75, imScale * hubbleImg.width, imScale * hubbleImg.height);
+    var imScale = 0.3;
+    image(hubbleImg, this.x - imScale * hubbleImg.width * 0.5, this.y - imScale * hubbleImg.height * 0.25, imScale * hubbleImg.width, imScale * hubbleImg.height);
 
   };
 }
